@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import LeftNavMenuItem from './LeftNavMenuItem'
 import { categories } from "../utils/constants";
 import { Context } from "../context/contextApi"
+import { FaHeart } from "react-icons/fa"
 
 const LeftNav = () => {
   const {selectCategories, setSelectCategories, mobileMenu} = useContext(Context)
@@ -32,7 +33,7 @@ const LeftNav = () => {
                 clickHandler(item.name, item.type)
                 navigate("/")
                }} 
-               className={`${selectCategories === item.name ? "bg-white/[0.15]" : ""}`}
+               className={`${selectCategories === item.name ? "bg-[#046ec4]/[0.6]" : ""}`}
                />
               {item.divider && (
                 <hr className="my-5 border-white/[0.2]" />
@@ -41,7 +42,7 @@ const LeftNav = () => {
           )
         })}
         <hr className="my-5 border-white/[0.2]" />
-        <div className="text-white/[0.5] text-[12px]">Developed with love by studioHammad.</div>
+        <div className="text-white/[0.5] text-[11px] flex">Developed with <FaHeart className='mx-[3px] text-[red] mt-[2px]'/> by studioHammad.</div>
 
       </div>
     </div>
