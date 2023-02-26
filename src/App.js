@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,13 +21,23 @@ import { AppContext } from './context/contextApi';
 
 
 const App = () => {
+      const[theme, setTheme] = useState("dark")
+      const themeToggle = () => {
+        if(theme==="dark"){
+            setTheme("light")
+            console.log(theme)
+        } else{
+            setTheme("dark")
+            console.log(theme)
+        }
+    }
   return (
     <AppContext>
       <Router>
         <div className='flex flex-col h-full'>
-          <Header />
+          <Header theme={theme} themeToggle={themeToggle}/>
           <Routes>
-            <Route path='/' exact element={<Feed />} />
+            <Route path='/' exact element={<Feed theme={theme}/>} />
             <Route path='/searchResult/:searchQuery'  element={<SearchResult />} />
             <Route path='/video/:id'  element={<VideoDetails />} />
 
