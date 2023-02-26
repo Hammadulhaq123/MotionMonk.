@@ -5,8 +5,9 @@ import LeftNavMenuItem from './LeftNavMenuItem'
 import { categories } from "../utils/constants";
 import { Context } from "../context/contextApi"
 import { FaHeart } from "react-icons/fa"
+import { color } from '@mui/system';
 
-const LeftNav = () => {
+const LeftNav = (props) => {
   const {selectCategories, setSelectCategories, mobileMenu} = useContext(Context)
   const navigate = useNavigate();
   const clickHandler = (name, type) => {
@@ -22,7 +23,7 @@ const LeftNav = () => {
     }
   }
   return (
-    <div className='md:block w-[240px] overflow-y-auto h-full py-4 bg-black absolute md:relative z-10 translate-x-[-240] md:translate-x-0 transition-all'>
+    <div className='md:block w-[240px] overflow-y-auto h-full py-4 absolute md:relative z-10 translate-x-[-240] md:translate-x-0 transition-all' style={{background:props.theme==="dark"?"black":"white", color: props.theme==="dark"?"white":"#046ec4"}}>
       <div className="flex px-5 flex-col">
         {categories.map((item,i) => {
           return (
@@ -34,15 +35,15 @@ const LeftNav = () => {
                 navigate("/")
                }} 
                className={`${selectCategories === item.name ? "bg-[#046ec4]/[0.6]" : ""}`}
-               />
+                theme={props.theme}/>
               {item.divider && (
-                <hr className="my-5 border-white/[0.2]" />
+                <hr className="my-5 border-blue-600/[0.2]" />
               )}
             </React.Fragment>
           )
         })}
-        <hr className="my-5 border-white/[0.2]" />
-        <div className="text-white/[0.5] text-[11px] flex">Developed with <FaHeart className='mx-[3px] text-[red] mt-[2px]'/> by studioHammad.</div>
+        <hr className="my-5 border-blue-600/[0.2]" />
+        <div className="text-blue-800/[0.9] text-[11px] flex">Developed with <FaHeart className='mx-[3px] text-[red] mt-[2px]'/> by studioHammad.</div>
 
       </div>
     </div>
