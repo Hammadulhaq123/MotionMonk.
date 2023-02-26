@@ -26,6 +26,7 @@ export const categories = [
         type: "category",
         divider: true,
     },
+    // {name: "Theme", icon: <RiLightbulbLine />, type: "menu", },
     { name: "Settings", icon: <FiSettings />, type: "menu" },
     { name: "Report History", icon: <AiOutlineFlag />, type: "menu" },
     { name: "Help", icon: <FiHelpCircle />, type: "menu" },
