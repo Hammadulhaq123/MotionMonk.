@@ -38,8 +38,8 @@ const App = () => {
           <Header theme={theme} themeToggle={themeToggle}/>
           <Routes>
             <Route path='/' exact element={<Feed theme={theme}/>} />
-            <Route path='/searchResult/:searchQuery'  element={<SearchResult />} />
-            <Route path='/video/:id'  element={<VideoDetails />} />
+            <Route path='/searchResult/:searchQuery'  element={<SearchResult theme={theme}/>} />
+            <Route path='/video/:id'  element={<VideoDetails theme={theme}/>} />
 
           </Routes>
         </div>

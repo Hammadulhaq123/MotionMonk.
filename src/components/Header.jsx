@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import ytLogo from "../images/yt-logo.png";
 import motionMonk from "../images/motionmonkmob2.png";
 import ytLogoMobile from "../images/yt-logo-mobile.png";
-import motionMonkMob from "../images/motionmonkmob2.png";
+import motionMonkMob from "../images/motionmonkmob copy.png";
 import user from "../images/user.jpeg"
 
 import { SlMenu } from "react-icons/sl";
@@ -64,7 +64,7 @@ const Header = (props) => {
 
                 <Link to="/" className="flex h-5 items-center">
                     <img className="h-72 hidden dark:md:block" src={motionMonk} alt="MotionMonk" />
-                    {/* <img className="h-40 w-80 md:hidden " src={motionMonkMob} alt="MotionMonk" /> */}
+                    <img className="h-[56px] mt-2 w-16 md:hidden " src={motionMonkMob} alt="MotionMonk" />
                     {/* <img className="h-full md:hidden " src={ytLogoMobile} alt="Youtube" /> */}
                     {/* <img
                         className="h-full hidden dark:md:block"
