@@ -44,7 +44,7 @@ const Header = (props) => {
     const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
     return (
-        <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 " style={{background:props.theme==="dark"?"black":"white", color:props.theme==="dark"?"white":"#046ec4"}}>
+        <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 " style={{ background: props.theme === "dark" ? "black" : "white", color: props.theme === "dark" ? "white" : "#046ec4" }}>
             {loading && <Loader />}
 
             <div className="flex h-5 items-center">
@@ -76,7 +76,7 @@ const Header = (props) => {
 
             </div>
             <div className="group flex items-center">
-                <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border  rounded-l-3xl group-focus-within:border-[#046ec4]/[0.6] md:group-focus-within:ml-5 md:group-focus-within:pl-0" style={{border:props.theme==="dark"?"1px solid #303030":"1px solid #046ec4"}}>
+                <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border  rounded-l-3xl group-focus-within:border-[#046ec4]/[0.6] md:group-focus-within:ml-5 md:group-focus-within:pl-0" style={{ border: props.theme === "dark" ? "1px solid #303030" : "1px solid #046ec4" }}>
                     <div className="w-10 items-center justify-center hidden group-focus-within:md:flex">
                         <IoIosSearch className=" text-xl" />
                     </div>
@@ -88,7 +88,7 @@ const Header = (props) => {
                         value={searchQuery}
                     />
                 </div>
-                <button className="w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0  rounded-r-3xl bg-white/0.1" style={{border:props.theme==="dark"?"1px solid #303030":" 1px solid #046ec4"}}>
+                <button className="w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0  rounded-r-3xl bg-white/0.1" style={{ border: props.theme === "dark" ? "1px solid #303030" : " 1px solid #046ec4" }}>
                     <IoIosSearch className=" text-xl" />
                 </button>
             </div>
